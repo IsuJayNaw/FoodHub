@@ -21,13 +21,22 @@ function showSuccess(input,message){
 //Check Email is Valid
 function checkEmail(input){
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+}
 
+//Check Required Fields
+function checkRequired(inputArr){
     
+    inputArr.forEach(function(input){
+        console.log(inputArr.value);
+    });
 }
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
+
+    checkRequired([username, email, password, password2]);
     
+    /*
     //Username Details
     if(username.value === ''){
        showError(username, 'Username is required');
@@ -42,7 +51,9 @@ form.addEventListener('submit', function(e){
      }
      else{
          showSuccess(email);
-     }
+     }*/
+
+
  
 
 });
