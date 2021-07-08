@@ -25,9 +25,8 @@ function checkEmail(input){
 
 //Check Required Fields
 function checkRequired(inputArr){
-    
     inputArr.forEach(function(input){
-        console.log(inputArr.value);
+       
     });
 }
 
@@ -36,24 +35,4 @@ form.addEventListener('submit', function(e){
 
     checkRequired([username, email, password, password2]);
     
-    /*
-    //Username Details
-    if(username.value === ''){
-       showError(username, 'Username is required');
-    }
-    else{
-        showSuccess(username);
-    }
-
-    //Email Details
-    if(email.value === ''){
-        showError(email, 'Email is required');
-     }
-     else{
-         showSuccess(email);
-     }*/
-
-
- 
-
 });
