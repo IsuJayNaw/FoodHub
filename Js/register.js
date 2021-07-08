@@ -26,8 +26,17 @@ function checkEmail(input){
 //Check Required Fields
 function checkRequired(inputArr){
     inputArr.forEach(function(input){
-       
+       if(input.value.trim() === ''){
+            showError(input,`${getFieldName(input)} is required`)
+       }else{
+           showSuccess(input);
+       }
     });
+}
+
+//Get field 
+function getFieldName(input){
+    return input.id.charAt(0).toUpperCase();
 }
 
 form.addEventListener('submit', function(e){
